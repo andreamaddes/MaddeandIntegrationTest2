@@ -1,0 +1,85 @@
+{
+  "id": "cde160e9-c796-4273-8893-006213540f99",
+  "version": "2.0",
+  "name": "Maddeand_DevOps2",
+  "url": "https://www.zhaw.ch",
+  "tests": [{
+    "id": "da5bd321-ecbe-46bb-962d-5c9e931a4574",
+    "name": "Test_Bachelor_ZHAW",
+    "commands": [{
+      "id": "686ec321-6a99-48b7-90f2-a14716670e0d",
+      "comment": "",
+      "command": "open",
+      "target": "/de/hochschule/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d7e7d17c-8f65-4d4e-adf6-a7db0b4e024b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1836x1191",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4fcce9f2-92b1-4a8c-b958-61ce423cbea3",
+      "comment": "",
+      "command": "click",
+      "target": "css=#nav-main > .has-sub:nth-child(1) > a > .link-text",
+      "targets": [
+        ["css=#nav-main > .has-sub:nth-child(1) > a > .link-text", "css:finder"],
+        ["xpath=//ul[@id='nav-main']/li/a/span", "xpath:idRelative"],
+        ["xpath=//nav/ul/li/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Studium')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f5d5edc2-cc13-4b91-bea3-c43bb75971d1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.d-block > li:nth-child(2) .link-text",
+      "targets": [
+        ["css=.d-block > li:nth-child(2) .link-text", "css:finder"],
+        ["xpath=//ul[@id='nav-main']/li/div/div/ul/li[2]/a/span", "xpath:idRelative"],
+        ["xpath=//li/div/div/ul/li[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Bachelorstudiengänge')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1bc56a57-4bd8-4df7-b70b-5afe572e2a0e",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=main-page-title",
+      "targets": [
+        ["id=main-page-title", "id"],
+        ["css=#main-page-title", "css:finder"],
+        ["xpath=//h1[@id='main-page-title']", "xpath:attributes"],
+        ["xpath=//main[@id='main-content']/h1", "xpath:idRelative"],
+        ["xpath=//main/h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Bachelorstudiengänge')]", "xpath:innerText"]
+      ],
+      "value": "Bachelorstudiengänge2"
+    }, {
+      "id": "726a7d7d-d4fe-42e6-bf68-b99ea11ce0c4",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.zhaw-sticker-header strong",
+      "targets": [
+        ["css=.zhaw-sticker-header strong", "css:finder"],
+        ["xpath=//div[@id='c104168']/div/div/a/div/div/p/strong", "xpath:idRelative"],
+        ["xpath=//div/div/p/strong", "xpath:position"],
+        ["xpath=//strong[contains(.,'Neugierig?')]", "xpath:innerText"]
+      ],
+      "value": "Neugierig?"
+    }]
+  }],
+  "suites": [{
+    "id": "5f1bc54a-0c34-42d2-b99c-877572147610",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["da5bd321-ecbe-46bb-962d-5c9e931a4574"]
+  }],
+  "urls": ["https://www.zhaw.ch/"],
+  "plugins": []
+}

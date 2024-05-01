@@ -1,0 +1,108 @@
+{
+  "id": "863815be-77b6-4053-b653-59187b9b49ee",
+  "version": "2.0",
+  "name": "Maddeand_DevOps",
+  "url": "https://en.wikipedia.org",
+  "tests": [{
+    "id": "a09dcadb-1493-4726-b1e1-dbfbf6a3ff6e",
+    "name": "Test_Bellinzona",
+    "commands": [{
+      "id": "2e13ad8f-45a1-4bdc-a86b-2422aa8bea50",
+      "comment": "",
+      "command": "open",
+      "target": "/wiki/Main_Page",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "32a8466e-5d72-430b-9e17-d29a82aa0042",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "922x522",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fe84cf1f-20ce-411c-9986-89fda053ec6d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mw-ui-icon-search",
+      "targets": [
+        ["css=.mw-ui-icon-search", "css:finder"],
+        ["xpath=//div[@id='p-search']/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1a827047-6f2a-4fb6-9e6b-17fd8c224593",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.cdx-search-input__end-button",
+      "targets": [
+        ["css=.cdx-search-input__end-button", "css:finder"],
+        ["xpath=//form[@id='searchform']/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Search')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c7861560-de16-480c-9963-bbe24c0471d4",
+      "comment": "",
+      "command": "type",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.cdx-text-input__input", "css:finder"],
+        ["xpath=//input[@name='search']", "xpath:attributes"],
+        ["xpath=//form[@id='searchform']/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": "Bellinzona"
+    }, {
+      "id": "376fba5d-53fe-4fcf-9fca-af6f34d719db",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.cdx-text-input__input", "css:finder"],
+        ["xpath=//input[@name='search']", "xpath:attributes"],
+        ["xpath=//form[@id='searchform']/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "c6a0515f-2141-42c1-8e16-9f32f8782e55",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.mw-page-title-main",
+      "targets": [
+        ["css=.mw-page-title-main", "css:finder"],
+        ["xpath=//h1[@id='firstHeading']/span", "xpath:idRelative"],
+        ["xpath=//h1/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Bellinzona')]", "xpath:innerText"]
+      ],
+      "value": "Bellinzona2"
+    }, {
+      "id": "c7c831c6-8c25-4842-b198-a597016a49f7",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.mw-page-title-main",
+      "targets": [
+        ["css=.mw-page-title-main", "css:finder"],
+        ["xpath=//h1[@id='firstHeading']/span", "xpath:idRelative"],
+        ["xpath=//h1/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Bellinzona')]", "xpath:innerText"]
+      ],
+      "value": "Bellinzona"
+    }]
+  }],
+  "suites": [{
+    "id": "1fd7e242-348d-4fe7-9940-7576c941fc1e",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["a09dcadb-1493-4726-b1e1-dbfbf6a3ff6e"]
+  }],
+  "urls": ["https://en.wikipedia.org/"],
+  "plugins": []
+}
